@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "offline-zotero-assistant"
+version = "1.0.0"
+description = "An offline Zotero research assistant using semantic search"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your-email@example.com"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "streamlit>=1.28.0",
+    "requests>=2.31.0",
+    "chromadb>=0.4.0",
+    "sentence-transformers>=2.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/offline-zotero-assistant"
+Repository = "https://github.com/yourusername/offline-zotero-assistant"
+Issues = "https://github.com/yourusername/offline-zotero-assistant/issues"
+
+[project.scripts]
+zotero-assistant = "simple_test:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"] 
